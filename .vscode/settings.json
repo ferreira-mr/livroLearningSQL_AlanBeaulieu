@@ -6,25 +6,25 @@
             },
             "previewLimit": 50,
             "server": "localhost",
-            "port": 3306,
-            "driver": "MySQL",
-            "name": "Sakila",
-            "database": "sakila",
-            "username": "root",
-            "password": "minha-senha"
-        },
-        {
-            "mysqlOptions": {
-                "authProtocol": "default"
-            },
-            "previewLimit": 50,
-            "server": "localhost",
             "port": 3307,
             "driver": "MariaDB",
             "name": "sakila-mariadb",
             "database": "sakila",
             "username": "root",
             "password": "my-secret-pw"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "xprotocol"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Sakila",
+            "database": "sakila",
+            "username": "root",
+            "password": "minha-senha"
         }
     ]
 }
