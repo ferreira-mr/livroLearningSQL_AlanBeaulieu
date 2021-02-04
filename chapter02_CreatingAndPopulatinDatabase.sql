@@ -27,3 +27,92 @@ CREATE TABLE favorite_food
  );
 
 desc favorite_food;
+
+ALTER TABLE person MODIFY person_id SMALLINT UNSIGNED AUTO_INCREMENT;
+
+set foreign_key_checks=0;
+ALTER TABLE person
+MODIFY person_id SMALLINT UNSIGNED AUTO_INCREMENT;
+set foreign_key_checks=1;
+
+INSERT INTO person
+    (person_id, fname, lname, eye_color, birth_date)
+VALUES
+    (null, 'William','Turner', 'BR', '1972-05-27');
+
+SELECT person_id, fname, lname, birth_date
+FROM person;
+
+SELECT person_id, fname, lname, birth_date
+FROM person
+WHERE person_id = 1;
+
+SELECT person_id, fname, lname, birth_date
+FROM person
+WHERE lname = 'Turner';
+
+INSERT INTO favorite_food (person_id, food)
+VALUES (1, 'pizza');
+
+INSERT INTO favorite_food (person_id, food)
+VALUES (1, 'cookies');
+
+INSERT INTO favorite_food (person_id, food)
+VALUES (1, 'nachos');
+
+SELECT food
+FROM favorite_food
+WHERE person_id = 1
+ORDER BY food;
+
+INSERT INTO person
+    (person_id, fname, lname, eye_color, birth_date, street, city, state, country, postal_code)
+VALUES
+    (null, 'Susan','Smith', 'BL', '1975-11-02','23 Maple St.', 'Arlington', 'VA', 'USA', '20220');
+
+SELECT person_id, fname, lname, birth_date
+FROM person;
+
+# Can I Get That in XML?
+# SELECT * FROM favorite_food
+# FOR XML AUTO, ELEMENTS
+
+UPDATE person
+SET street = '1225 Tremont St.',
+    city = 'Boston',
+    state = 'MA',
+    country = 'USA',
+    postal_code = '02138'
+WHERE person_id = 1;
+
+DELETE FROM person
+WHERE person_id = 2;
+
+INSERT INTO person
+    (person_id, fname, lname, eye_color, birth_date)
+VALUES
+    (1, 'Charles','Fulton', 'GR', '1968-01-15');
+
+INSERT INTO favorite_food
+    (person_id, food)
+VALUES
+    (999, 'lasagna');
+
+UPDATE person
+SET birth_date = 'DEC-21-1980'
+WHERE person_id = 1;
+
+show tables;
+
+DROP TABLE favorite_food;
+
+DROP TABLE person;
+
+desc customer;
+
+
+
+
+
+
+
