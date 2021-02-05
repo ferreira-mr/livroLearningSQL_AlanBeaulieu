@@ -109,10 +109,3 @@ DROP TABLE favorite_food;
 DROP TABLE person;
 
 desc customer;
-
-
-
-
-
-
-

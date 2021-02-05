@@ -13,3 +13,6 @@ docker run -e --name sakila-sqlserver 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong
 
 docker run --name sakila-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=minha-senha -d mysql:latest
 docker run --name sakila-mariadb -p 3307:3307 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mariadb:latest
+
+## SQL NO JUPTER NOTEBOOK
+
