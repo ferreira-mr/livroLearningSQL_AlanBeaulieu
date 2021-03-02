@@ -1,1 +1,0 @@
--- Theoretical considerations just

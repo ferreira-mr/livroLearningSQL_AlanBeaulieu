@@ -10,9 +10,9 @@ http://www.etl-tools.com
 
 */
 
-CREATE DATABASE sakila;
-GO
-USE sakila;
+-- CREATE DATABASE sakila;
+-- GO
+-- USE sakila;
 
 --
 -- Table structure for table actor
